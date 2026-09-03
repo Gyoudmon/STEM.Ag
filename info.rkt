@@ -11,8 +11,5 @@
 (define test-omit-paths 'all)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(define scribblings
-  '(["Gyoudmon.scrbl" (main-doc multi-page)]))
-
 (define typesettings
-  '(["MSOffice.scrbl" xelatex]))
+  '(["MathematicsNotes.scrbl" xelatex]))

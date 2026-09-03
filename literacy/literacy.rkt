@@ -48,3 +48,17 @@
 (define geo-vector
   (lambda [g [max-width 380] [max-height 0]]
     (geo-dsfit g max-width max-height)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define idea
+  (lambda argv
+    (apply racketoutput argv)))
+
+(define focus
+  (lambda argv
+    (apply racketvalfont argv)))
+
+(define question
+  (lambda argv
+    (apply racketparenfont argv)))
+

@@ -40,13 +40,13 @@
 
     (if (>= n 0)
         (when (< n 4)
-          (make-sticker (geo-path #:stroke 'ForestGreen #:target-tip default-arrow-tip
+          (make-sticker (geo-path #:stroke 'ForestGreen #:target-tip the-arrow.mrk
                                   #:labels (make-geo-path-label "+1" #:font font #:color 'ForestGreen)
                                   #:scale unit
                                   (list (list 0.1 0.5-0.16i 0.9)))
                         'lb offset))
 
-        (make-sticker (geo-path #:stroke 'Crimson #:target-tip default-arrow-tip
+        (make-sticker (geo-path #:stroke 'Crimson #:target-tip the-arrow.mrk
                                 #:labels (make-geo-path-label "-1" #:font font #:color 'Crimson)
                                 #:scale (* unit -1.0+1.0i)
                                 (list (list 0.1 0.5-0.16i 0.9)))
@@ -62,13 +62,13 @@
         
         (for/list : (Listof Geo-Sticker) ([idx (in-range 0 d)])
                 (if (> idx 0)
-                    (make-sticker (geo-path #:stroke 'RoyalBlue #:target-tip default-arrow-tip
+                    (make-sticker (geo-path #:stroke 'RoyalBlue #:target-tip the-arrow.mrk
                                             #:labels (make-geo-path-label #:font font #:color 'RoyalBlue #:rotate? #false
                                                                           (format "×~a" (add1 idx)) 0.618)
                                             #:scale (* scale idx)
                                             (list (list 0.0 0.16-0.4i 0.975)))
                                   'lb)
-                    (make-sticker (geo-path #:stroke 'Crimson #:target-tip default-arrow-tip
+                    (make-sticker (geo-path #:stroke 'Crimson #:target-tip the-arrow.mrk
                                             #:labels (make-geo-path-label #:font font #:color 'Crimson #:rotate? #false
                                                                           "×0" 0.618)
                                             #:scale (* scale (- idx 1) 1.0-1.0i)

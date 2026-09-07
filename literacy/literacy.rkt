@@ -62,3 +62,45 @@
   (lambda argv
     (apply racketparenfont argv)))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define note-style (make-style "noteStoryTearedPaper" '(multicommand)))
+(define note-complain-style (make-style "noteComplain" null))
+(define note-bonus-style (make-style "noteBonus" null))
+(define note-emph-style (make-style "noteEmph" null))
+(define note-question-style (make-style "noteQuestion" null))
+
+(define note-latex-anchor 'exercise)
+(define note-index-type 'note:exercise)
+
+(define note-exe
+  (lambda [#:tag [maybe-tag #false] . paras]
+    (define tag (or maybe-tag (gensym 'exe:)))
+    
+    (make-tamer-indexed-traverse-block
+     #:latex-anchor 'exercise
+     (λ [type chapter-index current-index]
+       (values tag
+               (list (para (format "精选习题 ~a.~a" chapter-index current-index))
+                     (decode-compound-paragraph paras))))
+     note-index-type
+     note-style)))
+
+(define note-complain
+  (lambda paras
+    (make-nested-flow note-complain-style 
+                      (list (apply tamer-indent-paragraphs paras)))))
+
+(define note-bonus
+  (lambda paras
+    (make-nested-flow note-bonus-style 
+                      (list (apply tamer-indent-paragraphs paras)))))
+
+(define note-tag
+  (lambda [bcolor fgcolor content]
+    (texbook-command "tagBox" #:opt-args (list bcolor) #:args (list fgcolor) content)))
+
+(define note-detailed-tag
+  (lambda [bcolor fgcolor title body]
+    (texbook-command "tagDetailedBox" #:opt-args (list bcolor) #:args (list fgcolor title) body)))
+
+

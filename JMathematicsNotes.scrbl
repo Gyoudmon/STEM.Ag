@@ -10,9 +10,9 @@
  #:documentclass 'scrreprt
  #:document-options '((DIV . 12))
  #:subtitle "架构师的跨学科课堂"
- #:figure @(geo-scale senior-cover-image 0.618)
+ #:figure @(geo-scale junior-cover-image 0.618)
  #:hide-version? #true
- ]{学神札记·高中数学}
+ ]{学神札记·初中数学}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @texbook-frontmatter[#:docls-book? #false]
@@ -21,7 +21,7 @@
 
 @$tex:newcounter[note-latex-anchor]
 
-@include-section{literacy/mathematics/languages.scrbl}
+@include-section{literacy/mathematics/coordinates.scrbl}
 
 @texbook-appendix{附录}
 

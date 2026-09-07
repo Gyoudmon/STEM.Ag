@@ -1,7 +1,7 @@
 #lang scribble/report
 
 @require{literacy/literacy.rkt}
-@require{literacy/mathematics/cover.rkt}
+@require{literacy/physics/cover.rkt}
 
 @(require geofun/vector)
 
@@ -10,9 +10,9 @@
  #:documentclass 'scrreprt
  #:document-options '((DIV . 12))
  #:subtitle "架构师的跨学科课堂"
- #:figure @(geo-scale senior-cover-image 0.618)
+ #:figure @(geo-scale senior-cover-image 0.42)
  #:hide-version? #true
- ]{学神札记·高中数学}
+ ]{学神札记·高中物理}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @texbook-frontmatter[#:docls-book? #false]
@@ -20,8 +20,6 @@
 @texbook-mainmatter[#:docls-book? #false]
 
 @$tex:newcounter[note-latex-anchor]
-
-@include-section{literacy/mathematics/languages.scrbl}
 
 @texbook-appendix{附录}
 

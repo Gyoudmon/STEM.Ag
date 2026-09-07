@@ -40,7 +40,7 @@
                   [else (choice rest idx swor)]))
 
           (nested #:style heretable-style
-                  (tabular #:row-properties '(top)
+                  (tabular #:row-properties '((top))
                            #:pad pad
                            (reverse swor)))))))
 

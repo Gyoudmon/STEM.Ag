@@ -7,9 +7,12 @@
 (define build-deps '("digimon" "scribble-lib" "racket-doc"))
 
 (define version "1.0")
-(define pkg-authors '("WarGrey G. Ju"))
+(define pkg-authors '("作者: 居老师"))
 (define test-omit-paths 'all)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define typesettings
-  '(["MathematicsNotes.scrbl" xelatex]))
+  '(["JMathematicsNotes.scrbl" xelatex]
+    ["MathematicsNotes.scrbl" xelatex]
+    ["JPhysicsNotes.scrbl" xelatex]
+    ["PhysicsNotes.scrbl" xelatex]))

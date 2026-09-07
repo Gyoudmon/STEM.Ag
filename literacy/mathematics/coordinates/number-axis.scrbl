@@ -16,7 +16,7 @@
 
 @handbook-scenario{数轴}
 
-@handbook-deftech[#:origin "Number Line"]{数轴}是一条标有@emph{原点}、统一@emph{单位长度}和@emph{正方向}的@emph{直线}。
+@handbook-deftech[#:origin "Number Axis"]{数轴}是一条标有@emph{原点}、统一@emph{单位长度}和@emph{正方向}的@emph{直线}。
 @tech{数轴}可以朝向任何方向，但通常会@emph{水平}放置，并且规定@emph{右边}为正方向。
 
 @nested[#:style 'inset]{
@@ -39,7 +39,7 @@
    该选项中的数轴被画成了射线，因此不对。}
  ]}
 
-@handbook-scenario{数轴上的有理数}
+@handbook-action{数轴上的有理数}
 
 所有的有理数都可以精确标定在数轴上。
 

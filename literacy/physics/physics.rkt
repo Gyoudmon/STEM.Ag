@@ -31,13 +31,14 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define-activity-diagram! phy.dia
+  #:start '.physics
   #:parameterize ([default-act-track-theme-adjuster track-style]
                   [default-dia-rubber-zone-theme-adjuster zone-colorize])
   [#:block-scale scale] #:-
   [#:zone 'SPhy #:desc "高中物理" #:options (list (make-dz:dock #:side 't #:position 0.0))
 
    [#:zone 'JPhy #:desc "初中物理" #:options (list (make-dz:dock #:side 't #:position 0.0))
-    (stay Qual.)
+    (jump-right 2.0 Qual.)
     (move-down 1.0 phenomenon)
     (move-down 1.0 Expt.)
     (move-right 1.0 '-+)]

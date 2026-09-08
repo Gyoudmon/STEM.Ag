@@ -41,17 +41,29 @@
    #2
    \end{tcolorbox}}
 
-\newcommand{\noteStoryTearedPaper}[2]{
+\newcommand{\noteExercise}[3]{
    \begin{tcolorbox}
-   [enhanced, breakable, frame hidden, title={#1},
-      attach boxed title to top right={ xshift=-1.618em, yshift=-2mm },
-      boxed title style={ colback=MidnightBlue, drop fuzzy shadow },
-      coltext=Silver, colback=Black, colframe=GhostWhite,
-      interior style={
-         draw=GhostWhite, line width=1pt, color=Black,
-         decorate, decoration={ random steps, segment length=3.6mm, amplitude=1.618mm }}]
-   #2
+   [enhanced, breakable, frame hidden,
+            title={#1 \small{#2}}, fonttitle=\bfseries\sffamily,
+            attach boxed title to top left={ xshift=1.618em, yshift=-2.5mm },
+            boxed title style={ colback=blue!50!white, drop fuzzy shadow },
+            borderline north={0.5pt}{0.5pt}{MidnightBlue!50},
+            coltext=Black, colback=GhostWhite, colframe=WhiteSmoke,
+            sharp corners=north, arc=1em, top=1.5em]
+   #3
    \end{tcolorbox}}
+
+\newcommand{\noteSolution}[3]{
+  \begin{tcolorbox}[
+    enhanced, breakable, frame hidden,
+    title={#1 \small{#2}}, fonttitle=\bfseries\sffamily,
+    attach boxed title to top left={ xshift=1.618em, yshift=-2.5mm },
+    boxed title style={ colback=ForestGreen!50!white, drop fuzzy shadow },
+    borderline north={0.5pt}{0.5pt}{ForestGreen!50},
+    coltext=Black, colback=GhostWhite, colframe=WhiteSmoke,
+    sharp corners=north, arc=1em, top=1.5em]
+    #3
+  \end{tcolorbox}}
 
 \newenvironment{noteComplain}
 {  \begin{tcolorbox}

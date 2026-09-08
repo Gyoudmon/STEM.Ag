@@ -19,17 +19,19 @@
 @handbook-deftech[#:origin "Number Axis"]{数轴}是一条标有@emph{原点}、统一@emph{单位长度}和@emph{正方向}的@emph{直线}。
 @tech{数轴}可以朝向任何方向，但通常会@emph{水平}放置，并且规定@emph{右边}为正方向。
 
-@nested[#:style 'inset]{
- @bold{精选练习1: } 以下数轴画法正确的是@tamer-choice-blank
+@note-exe{
+ 以下数轴画法正确的是@tamer-choice-blank
  
  @tamer-choices{
-  @(para (geo-scale Qnumber-axis.A.nl 0.5))
-  @(para (geo-scale Qnumber-axis.B.nl 0.5))
+  @(para (geo-scale Qnumber-axis.A.nl 0.55))
+  @(para (geo-scale Qnumber-axis.B.nl 0.55))
   
-  @(para (geo-scale Qnumber-axis.C.nl 0.5))
-  @(para (geo-scale Qnumber-axis.D.nl 0.5))}
+  @(para (geo-scale Qnumber-axis.C.nl 0.55))
+  @(para (geo-scale Qnumber-axis.D.nl 0.55))}}
 
+@note-sol{
  @bold{答案: B}
+
  @handbook-itemlist[
  #:style 'compact
  

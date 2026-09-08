@@ -63,27 +63,44 @@
     (apply racketparenfont argv)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(define note-style (make-style "noteStoryTearedPaper" '(multicommand)))
+(define separator (stone-image "separator@2x.png" #:scale 0.45))
+
+(define note-exercise-style (make-style "noteExercise" '(multicommand)))
+(define note-solution-style (make-style "noteSolution" '(multicommand)))
 (define note-complain-style (make-style "noteComplain" null))
 (define note-bonus-style (make-style "noteBonus" null))
 (define note-emph-style (make-style "noteEmph" null))
 (define note-question-style (make-style "noteQuestion" null))
 
 (define note-latex-anchor 'exercise)
-(define note-index-type 'note:exercise)
+(define note-exercise-index-type 'note:exercise)
+(define note-solution-index-type 'note:solution)
 
 (define note-exe
   (lambda [#:tag [maybe-tag #false] . paras]
     (define tag (or maybe-tag (gensym 'exe:)))
     
     (make-tamer-indexed-traverse-block
-     #:latex-anchor 'exercise
+     #:latex-anchor note-latex-anchor
      (λ [type chapter-index current-index]
        (values tag
                (list (para (format "精选习题 ~a.~a" chapter-index current-index))
-                     (decode-compound-paragraph paras))))
-     note-index-type
-     note-style)))
+                     (nested (decode-flow paras)))))
+     note-exercise-index-type
+     note-exercise-style)))
+
+(define note-sol
+  (lambda [#:tag [maybe-tag #false] . paras]
+    (define tag (or maybe-tag (gensym 'sol:)))
+    
+    (make-tamer-indexed-traverse-block
+     #:latex-anchor note-latex-anchor
+     (λ [type chapter-index current-index]
+       (values tag
+               (list (para (format "答案解析 ~a.~a" chapter-index current-index))
+                     (nested (decode-flow paras)))))
+     note-solution-index-type
+     note-solution-style)))
 
 (define note-complain
   (lambda paras

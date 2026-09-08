@@ -64,8 +64,8 @@
 (define hookes-law-plot
   (parameterize ([default-plot-visualizer-label-position 1.0])
     (plot-cartesian #:x-label "m" #:x-desc "砝码质量" #:x-unit-desc "g"
-                    #:y-label "ΔL" #:y-desc "弹簧增量" #:y-unit-desc "cm"
-                    #:x-range (cons 0 xmax) #:y-range (cons -2.0 10.0)
+                    #:y-label "ΔL" #:y-desc "长度增量" #:y-unit-desc "cm"
+                    #:x-range (cons 0 (max xmax 100)) #:y-range (cons (min b -2.0) (max ymax 10.0))
                     #:mark-style (make-plot-mark-style #:gap-length 4.0 #:pin-angle 0.0 #:gap-angle 0.0)
                     #:width 350 #:height 350
                     
@@ -92,4 +92,4 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (module+ main
-  hookes-law-plot)
+  (geo-scale hookes-law-plot 1.0))

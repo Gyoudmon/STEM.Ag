@@ -15,7 +15,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define tamer-choices
-  (lambda [#:pad:ex [pad:ex '(2.0 2.5)] A B . pre-flows]
+  (lambda [#:pad:ex [pad:ex '(1.0 2.5)] A B . pre-flows]
     (define choices (decode-flow (list* A B pre-flows)))
     (define block-who (current-block-id))
 
@@ -39,10 +39,10 @@
                      (choice rest idx++ (cons cell swor)))]
                   [else (choice rest idx swor)]))
 
-          (nested #:style heretable-style
-                  (tabular #:row-properties '((top))
-                           #:pad pad
-                           (reverse swor)))))))
+          (centered
+           (tabular #:row-properties '((top))
+                    #:pad pad
+                    (reverse swor)))))))
 
 (define choice-single-column
   (lambda [self idx]

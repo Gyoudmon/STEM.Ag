@@ -36,23 +36,21 @@
 而从两个数构造出的点则用大写字母表示。
 换句话说，“点”的代数表示其实也是一类容器型数学对象。
 同理，从多个@tech{元素}构造出的@tech{集合}也是用大写字母表示。
-
 这是约定俗成，也在事实上构成了数学的语法。
 
-@$tex:vspace[20]
 @note-exe{
  (多选题)一次函数@${y = x - 3}与@${y = -2x}的图像交点组成的集合是@tamer-choice-blank
  
- @tamer-choices[#:pad:ex 1.5]{
+ @tamer-choices[#:pad:ex 1]{
   @(para @${\{1, -2\}})
   @(para @${\{x = 1, y = -2\}})
   @(para @${\{(1, -2)\}})
-  @(para @${\{(x, y) \mid \begin{cases} y = x - 3 \\ y = -2x \end{cases} \}})}
+  @(para @${\{(x, y) \mid \begin{cases} y = x - 3 \\ y = -2x \end{cases} \}})}}
 
- @bold{答案: CD}
+@note-sol{
+ @bold{答: CD}
 
- @bold{详细解答}
- 
+ @bold{解:}
  联立方程得到解为 @${\begin{cases} x = 1 \\ y = -2 \end{cases}}，对应平面上的点 @${(1, -2)}。
  因此，它们交点组成的@tech{集合}是一个只含单个@tech{元素}的点集。
  @emph{C} 选项是其@emph{列举法}表示，

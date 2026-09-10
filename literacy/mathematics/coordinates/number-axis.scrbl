@@ -13,6 +13,7 @@
 @tech{数轴}是解析几何的雏形。
 它首次用@emph{严谨}的方法帮助孩子建立数字和几何图形的@emph{精确}关系，
 为八年级学习坐标系、高中学习解析几何做了铺垫。
+在其他理科学习中也有诸多有趣又有用的应用。
 
 @handbook-scenario{数轴}
 
@@ -23,11 +24,11 @@
  以下数轴画法正确的是@tamer-choice-blank
  
  @tamer-choices{
-  @(para (geo-scale Qnumber-axis.A.nl 0.55))
-  @(para (geo-scale Qnumber-axis.B.nl 0.55))
+  @(para (geo-scale Qnumber-axis.A.nl 0.5))
+  @(para (geo-scale Qnumber-axis.B.nl 0.5))
   
-  @(para (geo-scale Qnumber-axis.C.nl 0.55))
-  @(para (geo-scale Qnumber-axis.D.nl 0.55))}}
+  @(para (geo-scale Qnumber-axis.C.nl 0.5))
+  @(para (geo-scale Qnumber-axis.D.nl 0.5))}}
 
 @note-sol{
  @bold{答案: B}
@@ -41,7 +42,7 @@
    该选项中的数轴被画成了射线，因此不对。}
  ]}
 
-@handbook-action{数轴上的有理数}
+@handbook-action{数轴上的点}
 
 所有的有理数都可以精确标定在数轴上。
 

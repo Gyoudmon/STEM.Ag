@@ -1,4 +1,4 @@
-#lang scribble/report
+#lang scribble/book
 
 @require{literacy/literacy.rkt}
 @require{literacy/physics/cover.rkt}
@@ -7,8 +7,7 @@
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @handbook-title[
- #:documentclass 'scrreprt
- #:document-options '((DIV . 12))
+ #:document-options '(openany oneside)
  #:subtitle "架构师的跨学科课堂"
  #:figure @(geo-scale @junior-cover-image 0.618)
  #:hide-version? #true

@@ -23,8 +23,7 @@
 
 (tamer-default-figure-label "图")
 (tamer-default-table-label "表")
-(tamer-default-code-label "段")
-(tamer-default-algorithm-label "活动")
+(tamer-default-algorithm-label "算法")
 
 (tamer-indexed-block-hide-chapter-index #false)
 
@@ -65,15 +64,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define separator (stone-image "separator@2x.png" #:scale 0.45))
 
-(define note-exercise-style (make-style "noteExercise" '(multicommand)))
+(define note-problem-style (make-style "noteProblem" '(multicommand)))
 (define note-solution-style (make-style "noteSolution" '(multicommand)))
 (define note-complain-style (make-style "noteComplain" null))
 (define note-bonus-style (make-style "noteBonus" null))
 (define note-emph-style (make-style "noteEmph" null))
 (define note-question-style (make-style "noteQuestion" null))
 
-(define note-latex-anchor 'exercise)
-(define note-exercise-index-type 'note:exercise)
+(define note-latex-anchor 'problem)
+(define note-exercise-index-type 'note:problem)
 (define note-solution-index-type 'note:solution)
 
 (define note-exe
@@ -84,10 +83,10 @@
      #:latex-anchor note-latex-anchor
      (λ [type chapter-index current-index]
        (values tag
-               (list (para (format "精选习题 ~a.~a" chapter-index current-index))
+               (list (para (format "Problem ~a.~a" chapter-index current-index))
                      (nested (decode-flow paras)))))
      note-exercise-index-type
-     note-exercise-style)))
+     note-problem-style)))
 
 (define note-sol
   (lambda [#:tag [maybe-tag #false] . paras]
@@ -97,7 +96,7 @@
      #:latex-anchor note-latex-anchor
      (λ [type chapter-index current-index]
        (values tag
-               (list (para (format "答案解析 ~a.~a" chapter-index current-index))
+               (list (para (format "Solution ~a.~a" chapter-index current-index))
                      (nested (decode-flow paras)))))
      note-solution-index-type
      note-solution-style)))

@@ -2,25 +2,47 @@
 %% `macnew` looks better in `srcreprt`
 \usepackage[heading = true, fontset = macnew]{ctex}
 
-\usepackage[os=win, mackeys=symbols]{menukeys}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\addtolength{\headwidth}{\marginparwidth}
 
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{3}
 
-%% reset chapter counters for parts
-% \usepackage{chngcntr}
-% \counterwithin{chapter}{part}
+%% for wider margin aocs
+\usepackage[
+   a4paper,
+   includemp,
+   top=3.170cm,
+   bottom=2.510cm,
+   left=1.6835cm,
+   right=0.6cm,
+   marginparwidth=36mm,
+   marginparsep=4mm
+]{geometry}
 
-\renewcommand{\contentsname}{目\hspace{1em}录}
+%% reset chapter counters for parts
+\usepackage{chngcntr}
+\counterwithin{chapter}{part}
+
+\newcommand{\defaultPage}{\newgeometry{left=32mm, top=32mm, ignoremp}}
+\newcommand{\defaultPageOriginalHeadWidth}{\defaultPage \addtolength{\headwidth}{-\marginparwidth}}
+
+\renewcommand{\preDoc}{\defaultPage}
+\renewcommand{\preMainMatter}{\restoregeometry}
+\renewcommand{\postMainMatter}{\defaultPageOriginalHeadWidth}
 
 %% set chapter format
 \ctexset{
-   chapter/name = {第, 篇},
+   part/name = {第, 篇},
+   part/number = \chinese{part},
+   part/format = \Huge\bfseries,
+   chapter/name = {第, 幕},
    chapter/number = \chinese{chapter},
-   section/name = {第, 幕},
+   section/name = {第, 场},
    section/number = \chinese{section},
    section/format = \Large\bfseries,
-   subsection/name = {第, 场},
+   subsection/name = {第, 景},
    subsection/number = \chinese{subsection},
    subsubsection/name = {第, 镜},
    subsubsection/number = \chinese{subsubsection}
@@ -41,7 +63,7 @@
    #2
    \end{tcolorbox}}
 
-\newcommand{\noteExercise}[3]{
+\newcommand{\noteProblem}[3]{
    \begin{tcolorbox}
    [enhanced, breakable, frame hidden,
             title={#1 \small{#2}}, fonttitle=\bfseries\sffamily,

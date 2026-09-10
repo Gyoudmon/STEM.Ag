@@ -41,7 +41,7 @@
 @note-exe{
  (多选题)一次函数@${y = x - 3}与@${y = -2x}的图像交点组成的集合是@tamer-choice-blank
  
- @tamer-choices[#:pad:ex 1]{
+ @tamer-choices[#:pad:ex 0.72]{
   @(para @${\{1, -2\}})
   @(para @${\{x = 1, y = -2\}})
   @(para @${\{(1, -2)\}})

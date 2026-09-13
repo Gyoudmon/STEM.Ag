@@ -3,8 +3,8 @@
 @(require "../literacy.rkt")
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-@handbook-part{坐标方法}
+@handbook-part{数学表示}
 
-@include-section{coordinates/number-axis.scrbl}
+@include-section{representation/pattern.scrbl}
 
 @handbook-reference[]

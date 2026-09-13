@@ -38,7 +38,7 @@
 同理，从多个@tech{元素}构造出的@tech{集合}也是用大写字母表示。
 这是约定俗成，也在事实上构成了数学的语法。
 
-@note-exe{
+@note-problem{
  (多选题)一次函数@${y = x - 3}与@${y = -2x}的图像交点组成的集合是@tamer-choice-blank
  
  @tamer-choices[#:pad:ex 0.72]{
@@ -47,7 +47,7 @@
   @(para @${\{(1, -2)\}})
   @(para @${\{(x, y) \mid \begin{cases} y = x - 3 \\ y = -2x \end{cases} \}})}}
 
-@note-sol{
+@note-solution{
  @bold{答: CD}
 
  @bold{解:}

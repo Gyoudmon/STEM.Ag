@@ -20,6 +20,7 @@
 
 @$tex:newcounter[note-latex-anchor]
 
+@include-section{literacy/mathematics/representation.scrbl}
 @include-section{literacy/mathematics/coordinates.scrbl}
 
 @texbook-appendix{附录}

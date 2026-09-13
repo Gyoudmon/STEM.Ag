@@ -75,7 +75,7 @@
 (define note-exercise-index-type 'note:problem)
 (define note-solution-index-type 'note:solution)
 
-(define note-exe
+(define note-problem
   (lambda [#:tag [maybe-tag #false] . paras]
     (define tag (or maybe-tag (gensym 'exe:)))
     
@@ -88,7 +88,7 @@
      note-exercise-index-type
      note-problem-style)))
 
-(define note-sol
+(define note-solution
   (lambda [#:tag [maybe-tag #false] . paras]
     (define tag (or maybe-tag (gensym 'sol:)))
     
